@@ -1,0 +1,278 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #E2FDFF;
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    padding-bottom: 70px;
+    border-bottom: 9px solid #D9D9D9;
+}
+
+footer {
+    margin-top: 150px;
+    background-color: #1B0051;
+}
+
+.limiter {
+    margin: 30px 200px 0 200px;
+}
+
+.payment {
+    padding: 20px 40px;
+    width: 540px;
+    background-color: #BFD7FF;
+    border-radius: 10px;
+}
+
+#title {
+    margin-top: 10px;
+    font-size: 48px;
+    color: #1B0051;
+    font-weight: 600;
+}
+
+.delivery-Address {
+    padding: 52px 40px;
+    width: 700px;
+    height: 400px;
+    background-color: #5465FF;
+    border-radius: 10px;
+}
+
+.total {
+    padding: 30px 40px;
+    width: 389px;
+    height: 425px;
+    background-color: #5465FF;
+    border-radius: 10px;
+}
+
+.ContactInfo {
+    padding: 60px 52px;
+    width: 678px;
+    height: 390px;
+    background-color: #5465FF;
+    border-radius: 10px;
+}
+
+.PaymentMethod {
+    padding: 51px;
+    width: 1300px;
+    height: 320px;
+    background-color: #5465FF;
+    border-radius: 10px;
+}
+
+h1,
+h4 {
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 48px;
+}
+
+h4 {
+    margin-top: 64px;
+    margin-bottom: 38px;
+    font-size: 32px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.sb {
+    justify-content: space-between;
+}
+
+.jcc {
+    justify-content: center;
+}
+
+.aic {
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+#logo-text{
+    padding: 35px 0;
+    padding-left: 17px;
+    font-size: 40px;
+    color: #1B0051;
+    font-weight: bold;
+}
+
+#title {
+    margin-top: 70px;
+    margin-bottom: 80px;
+    font-size: 48px;
+    color: #1B0051;
+    font-weight: bold;
+    text-align: left;
+}
+
+.text-footer {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.map-text-title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.order-header{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.payment-lists {
+    margin-top: 27px;
+    margin-bottom: 8px
+}
+
+.bt-delivery-mode {
+    margin-top: 54px;
+    margin-bottom: 100px;
+}
+
+.contact-text-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contact-text-description {
+    width: 620px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 360px;
+    height: 24px;
+    background-color: #BFD7FF;
+}
+
+.inputRadio {
+    appearance: none;
+    margin-right: 46px;
+    position: relative;
+    width: 25px;
+    background: #ffffff;
+    border-radius: 50%;
+}
+
+.inputRadio::before {
+    content: '';
+    overflow: hidden;
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+.inputRadio:checked::before {
+    background-color: #505050;
+}
+
+.post1,
+.post2,
+.post3 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 46px;
+}
+
+.post1 {
+    margin-right: 117px;
+}
+
+.post3 {
+    margin-left: auto;
+}
+
+.bt-back {
+    padding: 35px;
+    color: #1B0051;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.bt-delivery-selection-acitve,
+.bt-delivery-selection,
+.bt-card-selection {
+    margin-right: 10px;
+    padding: 18px 31px;
+    color: #ffffff;
+    font-size: 24px;
+    background-color: #3D00B8;
+    border: none;
+    border-radius: 5px;
+}
+
+.bt-delivery-selection {
+    background-color: #788BFF;
+}
+
+.bt-card-selection {
+    padding: 14px 20px;
+    background-color: #788BFF;
+}
+
+.bt-pay {
+    margin: 0 31px;
+    margin-top: 50px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #788BFF;
+    border: none;
+    border-radius: 5px;
+}
+
+.bt-pay:hover {
+    background-color: #1B0051;
+}
+
+.bt-arrange{
+    padding: 16px;
+    width: 297px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #788BFF;
+    border: none;
+    border-radius: 10px;
+}
+
+.LogoImg {
+    width: 89px;
+    height: 89px;
+}

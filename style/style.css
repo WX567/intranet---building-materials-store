@@ -1,0 +1,525 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #E2FDFF;
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    padding-bottom: 70px;
+    border-bottom: 9px solid #D9D9D9;
+}
+
+footer {
+    margin-top: 150px;
+    background-color: #1B0051;
+}
+
+.limiter {
+    margin: 30px 200px 0 200px;
+}
+
+.Logo {
+    margin-right: 80px;
+}
+
+#title {
+    margin-top: 10px;
+    font-size: 48px;
+    color: #1B0051;
+    font-weight: 600;
+}
+
+.catalog {
+    margin-top: 8%;
+    margin-bottom: 5%;
+}
+
+.infographics {
+    padding: 62px 36px;
+    padding-left: 120px;
+    background-color: #5465FF;
+    border-radius: 10px;
+}
+
+.product {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.HeaderAlignment {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px 0;
+}
+
+.card {
+    margin-bottom: 20px;
+    padding: 38px 38px 0;
+    background-color: #778BFF;
+    border-radius: 10px;
+}
+
+.filter {
+    margin-top: 40px;
+    margin-bottom: 80px;
+    padding: 22px 10px;
+    width: 206px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: bold;
+    background-color: #5465FF;
+    border-radius: 10px;
+}
+
+.block-price {
+    width: 235px;
+    margin-bottom: 32px;
+}
+
+h1,
+h4 {
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 48px;
+}
+
+h4 {
+    text-align: start;
+    margin-top: 64px;
+    margin-bottom: 38px;
+    font-size: 32px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.fw {
+    flex-wrap: wrap;
+}
+
+.sb {
+    justify-content: space-between;
+}
+
+.sa {
+    justify-content: space-around;
+}
+
+.jcc {
+    justify-content: center;
+}
+
+.aic {
+    align-items: center;
+}
+
+.mb {
+    margin-bottom: 40px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.linkAligner1,
+.linkAligner2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.linkAligner1 {
+    margin-right: 50px;
+}
+
+p {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+#logo-text {
+    padding: 35px 0;
+    padding-left: 17px;
+    font-size: 40px;
+    color: #1B0051;
+    font-weight: bold;
+}
+
+#title {
+    margin-top: 70px;
+    margin-bottom: 109px;
+    font-size: 64px;
+    color: #1B0051;
+    font-weight: bold;
+    text-align: left;
+}
+
+.reference-text {
+    color: #1B0051;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.catalogExample {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0 77px;
+}
+
+.columns {
+    display: flex;
+    flex-direction: row;
+    gap: 0 53px;
+}
+
+.catalog-text {
+    color: #1B0051;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.catalog-text:hover {
+    border-bottom: 2px solid #1B0051;
+}
+
+.infographics-headerText {
+    font-size: 96px;
+    font-weight: bolder;
+}
+
+.infographics-text {
+    font-size: 36px
+}
+
+.card-name {
+    margin: 20px 0;
+    width: 235px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #1B0051;
+}
+
+.price {
+    width: 70px;
+    font-weight: bold;
+}
+
+.text-footer {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+input {
+    padding: 20px;
+    width: 360px;
+    height: 24px;
+    background-color: #BFD7FF;
+    color: #1B0051;
+    font: 24px "Roboto", sans-serif;
+    font-weight: 700;
+    border: none;
+    border-radius: 18px;
+}
+
+.searchInput:focus {
+    outline: none;
+    border: none;
+}
+
+.searchInput {
+    margin-right: 230px;
+    display: flex;
+    width: 600px;
+    height: 34px;
+}
+
+
+.post1,
+.post2,
+.post3 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 46px;
+}
+
+.post1 {
+    margin-right: 117px;
+}
+
+.post3 {
+    margin-left: auto;
+}
+
+.bt-catalog {
+    margin-right: 86px;
+    padding: 22px;
+    width: 225px;
+    height: 40px;
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: bold;
+    background-color: #5465FF;
+    border: none;
+    border-radius: 10px;
+    gap: 36px 30px;
+}
+
+.Menu {
+    width: 55px;
+    height: 40px;
+}
+
+.bt-back,
+.bt-forward {
+    width: 70px;
+    height: 70px;
+    color: #ffffff;
+    font-size: 16px;
+    background-color: #5465FF;
+    border: none;
+    border-radius: 50%;
+}
+
+.bt-addСart {
+    padding: 20px 40px;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #543AC9;
+    border: none;
+    border-radius: 5px;
+}
+
+.LogoImg {
+    width: 89px;
+    height: 89px;
+}
+
+.circleImg {
+    padding-bottom: 10px;
+    width: 57px;
+    height: 57px;
+}
+
+.bannerImg {
+    overflow: hidden;
+    width: 590px;
+    height: 295px;
+    border-radius: 10px;
+}
+
+.banner1 {
+    left: 100px;
+}
+
+.productImages {
+    width: 235px;
+    height: 235px;
+    border-radius: 10px;
+}
+
+.ArrowImg {
+    padding-top: 7px;
+    width: 40px;
+    height: 40px;
+    color: #ffffff;
+}
+
+@media screen and (min-width : 320px) and (max-width : 480px) {
+
+    header {
+        padding-bottom: 0px;
+    }
+
+    footer {
+        margin-top: 75px;
+    }
+
+    .limiter {
+        margin: 59px 34px 28px 34px;
+    }
+
+    .Logo {
+        margin-right: 60px;
+    }
+
+    #logo-text {
+        display: none;
+    }
+
+    .linkAligner1 {
+        margin-right: 20px;
+    }
+
+    .circleImg {
+        width: 53px;
+        height: 53px;
+    }
+
+    .reference-text {
+        font-size: 22px;
+    }
+
+    .searchInput {
+        margin-right: 0;
+        width: 100%;
+        order: 1;
+    }
+
+    /* Каталог */
+    .catalog {
+        column-gap: 50px;
+    }
+
+    .bt-catalog {
+        margin-right: 0;
+        margin-bottom: 50px;
+        padding: 15px;
+        width: 50%;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+
+    .Menu {
+        width: 25%;
+        height: 70%;
+    }
+
+    .columns {
+        display: flex;
+        flex-direction: column;
+        gap: 30px 0;
+    }
+
+    .Banner {
+        display: none;
+    }
+
+    /* Фильтер */
+
+    .filter {}
+
+    /* Инфографика */
+
+    .infographics {
+        margin: 0;
+        padding: 30px;
+        border-radius: 0;
+    }
+
+    .infographics-headerText {
+        font-size: 40px;
+        font-weight: bolder;
+    }
+
+    .infographics-text {
+        font-size: 20px
+    }
+
+    /* Товары */
+
+    .card {
+        padding: 20px;
+    }
+
+    .productImages {
+        width: 133px;
+        height: 133px;
+    }
+
+    .card-name {
+        width: 133px;
+        font-size: 12px;
+    }
+
+    .price {
+        font-size: 15px;
+    }
+
+    .block-price {
+        width: 133px;
+        margin-bottom: 0;
+    }
+
+    .bt-addСart {
+        padding: 10px 10px;
+        width: 173px;
+        font-size: 11px;
+        margin-bottom: 30px;
+    }
+
+    .filter {
+        margin-bottom: 40px;
+        padding: 15px 10px;
+        width: 145px;
+        font-size: 20px;
+        border-radius: 5px;
+    }
+
+    .Post12 {
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 60px;
+    }
+
+    .post1,
+    .post2,
+    .post3 {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 46px;
+    }
+
+    .post1 {
+        margin-right: 0;
+    }
+
+    h4 {
+        margin-top: 0;
+        font-size: 20px;
+    }
+
+    .text-footer {
+        font-size: 16px;
+    }
+
+    .post3 {
+        margin-left: 0;
+    }
+}
+
+/* кнопки */
+@media (hover: hover) {
+    .bt-catalog:hover {
+        background-color: #5465FF;
+    }
+
+    .filter:hover {
+        background-color: #1B0051;
+    }
+
+    .bt-addСart:hover {
+        background-color: #5465FF;
+    }
+
+    .bt-back:hover,
+    .bt-forward:hover {
+        font-size: 16px;
+        background-color: #5465FF;
+    }
+}

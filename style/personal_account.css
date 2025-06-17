@@ -1,0 +1,198 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #E2FDFF;
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    padding-bottom: 70px;
+    border-bottom: 9px solid #D9D9D9;
+}
+
+footer {
+    margin-top: 200px;
+    background-color: #1B0051;
+}
+
+.limiter {
+    margin: 30px 200px 0 200px;
+}
+
+.alignment0 {
+    margin-bottom: 44px;
+}
+
+.alignment1 {
+    display: flex;
+    margin-right: 45px;
+}
+
+.nav-bottom {
+    margin-bottom: 41px;
+}
+
+.block {
+    width: 88px;
+    height: 88px;
+    background-color: black;
+}
+
+.data-personal1 {
+    padding-bottom: 27px;
+    border-bottom: 8px solid #1B0051;
+}
+
+.nav-block-Active,
+.nav-block-Inactivev {
+    display: block;
+    width: 47px;
+    height: 47px;
+    background-color: #BFD7FF;
+    border-radius: 5px;
+}
+
+.nav-block-Inactivev {
+    background-color: #505050;
+}
+
+.icon {
+    display: block;
+    width: 35px;
+    height: 35px;
+    background-color: #505050;
+    border-radius: 5px;
+}
+
+#Account {
+    margin: 95px 0;
+}
+
+.info-field {
+    padding: 47px 31px 52px;
+    width: 670px;
+    height: 250px;
+    background-color: #5465FF;
+    border-radius: 10px;
+}
+
+.navigation {
+    margin-right: 83px;
+}
+
+h1,
+h4 {
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 48px;
+}
+
+h4 {
+    margin-top: 64px;
+    margin-bottom: 38px;
+    font-size: 32px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.sb {
+    justify-content: space-between;
+}
+
+.jcc {
+    justify-content: center;
+}
+
+.aic {
+    align-items: center;
+}
+
+.gap-right {
+    display: flex;
+    gap: 265px 0;
+}
+
+a {
+    font-size: 24px;
+    text-decoration: none;
+}
+
+p {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+#logo-text {
+    font-size: 40px;
+    color: #1B0051;
+    font-weight: bold;
+}
+
+#logo-text {
+    padding: 35px 0;
+    padding-left: 17px;
+}
+
+.text-footer {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.text-header {
+    margin-left: 119px;
+    font-size: 64px;
+    color: #1B0051;
+    font-weight: bold;
+}
+
+.nav-hint {
+    color: #505050;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-text {
+    margin-left: 29px;
+    color: #1B0051;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.post1,
+.post2,
+.post3 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 46px;
+}
+
+.post1 {
+    margin-right: 117px;
+}
+
+.post3 {
+    margin-left: auto;
+}
+
+.Avatar {
+    width: 195px;
+    height: 195px;
+    border-radius: 50%;
+}
+
+.LogoImg {
+    width: 89px;
+    height: 89px;
+}

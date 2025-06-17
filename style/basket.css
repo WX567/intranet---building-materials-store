@@ -1,0 +1,333 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #E2FDFF;
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    padding-bottom: 70px;
+    border-bottom: 9px solid #D9D9D9;
+}
+
+footer {
+    background-color: #1B0051;
+}
+
+.limiter {
+    margin: 30px 200px 0 200px;
+}
+
+.alignment0 {
+    margin-bottom: 44px;
+}
+
+.alignment1 {
+    display: flex;
+    margin-right: 45px;
+}
+
+.alignment3 {
+    display: block;
+}
+
+.block {
+    width: 88px;
+    height: 88px;
+    background-color: black;
+}
+
+.content {
+    flex-wrap: wrap;
+    align-content: center;
+    width: 100%;
+    padding: 30px 25px 19px 25px;
+    background-color: #788BFF;
+    border-radius: 10px;
+}
+
+.article {
+    margin-bottom: 7px;
+    width: 279px;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.math-block {
+    display: flex;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: #BFD7FF;
+    border-radius: 5px;
+}
+
+.money {
+    display: flex;
+    justify-content: center;
+    margin-right: 50px;
+    width: 70px;
+    height: 34px;
+    background-color: #BFD7FF;
+    border-radius: 5px;
+}
+
+.data-product {
+    margin-bottom: 21px;
+    padding-top: 39px;
+    padding-bottom: 21px;
+    border-bottom: 6px solid #1B0051;
+}
+
+#title {
+    margin-top: 10px;
+    font-size: 48px;
+    color: #1B0051;
+    font-weight: 600;
+}
+
+#search {
+    margin: 95px 0;
+}
+
+#formBasket {
+    padding: 46px 34px 60px 53px;
+    width: 1077px;
+    height: 445px;
+    background-color: #5465FF;
+    border-radius: 10px;
+}
+
+#total {
+    padding: 30px 40px;
+    margin-left: 57px;
+    width: 389px;
+    height: 425px;
+    background-color: #5465FF;
+    border-radius: 10px;
+}
+
+h1,
+h4 {
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 48px;
+}
+
+h4 {
+    margin-top: 64px;
+    margin-bottom: 38px;
+    font-size: 32px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.sb {
+    justify-content: space-between;
+}
+
+.jcc {
+    justify-content: center;
+}
+
+.aic {
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.linkAligner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+p {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+#logo-text,
+.money-text,
+.counter,
+.text-Del {
+    font-size: 40px;
+    color: #1B0051;
+    font-weight: bold;
+}
+
+#logo-text {
+    padding: 35px 0;
+    padding-left: 17px;
+}
+
+.text-footer {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.name-product {
+    font-size: 16px;
+}
+
+.product {
+    margin-right: 449px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.text-header {
+    font-size: 32px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.money-text {
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.counter {
+    margin: 0 20px;
+    font-size: 20px;
+}
+
+.text-Del {
+    margin-left: 42px;
+    font-size: 20px;
+}
+
+.price {
+    margin-right: 60px;
+}
+
+.payment-lists {
+    font-weight: 600;
+}
+
+.text-price {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.bot {
+    margin-bottom: 7px;
+}
+
+input {
+    margin-bottom: 7px;
+    padding: 20px;
+    width: 360px;
+    height: 24px;
+    background-color: #BFD7FF;
+    color: #1B0051;
+    font: 24px "Roboto", sans-serif;
+    font-weight: 700;
+    border: none;
+    border-radius: 18px;
+}
+
+.searchInput:focus {
+    outline: none;
+    border: none;
+}
+
+.inputCheckbox {
+    appearance: none;
+    margin-right: 46px;
+    position: relative;
+    width: 40px;
+    background: #ffffff;
+    border: 5px solid #788BFF;
+    border-radius: 10px;
+}
+
+.inputCheckbox::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+}
+
+.inputCheckbox:checked::before {
+    background-color: #1B0051;
+}
+
+.searchInput {
+    display: flex;
+    width: 750px;
+    height: 39px;
+}
+
+.post1,
+.post2,
+.post3 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 46px;
+}
+
+.post1 {
+    margin-right: 117px;
+}
+
+.post3 {
+    margin-left: auto;
+}
+
+.bt-back {
+    padding: 35px;
+    color: #1B0051;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.bt-regist {
+    margin: 0 31px;
+    margin-top: 50px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    background-color: #788BFF;
+    border: none;
+    border-radius: 5px;
+}
+
+.bt-regist:hover {
+    background-color: #1B0051;
+}
+
+.LogoImg {
+    width: 89px;
+    height: 89px;
+}
+
+.productImg{
+    width: 89px;
+    height: 89px;
+    border-radius: 10px;
+}
