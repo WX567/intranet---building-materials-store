@@ -10,43 +10,42 @@
 
 <body>
     <header>
-        <div class="row limiter aic HeaderAlignment">
-            <div class="row aic Logo">
-                <a href="index.html"><img src="imags/ЛогоМолоток.png" alt="Лого" class="LogoImg"></a>
+        <div class="row limiter aic sb HeaderAlignment">
+            <div class="row aic">
+                <a href="index.html" class="linkMainPage"><img src="imags/ЛогоМолоток.png" alt="Лого"
+                        class="LogoImg"></a>
                 <p id="logo-text">Молоток</p>
             </div>
             <input type="text" placeholder="поиск" class="searchInput">
-            <a href="basket.html" class="linkAligner1">
-                <img src="imags/КРУГ.svg" alt="Круг" class="circleImg">
-                <p class="reference-text">Корзина</p>
-            </a>
-            <a href="personal_account.html" class="linkAligner2">
-                <img src="imags/КРУГ.svg" alt="Круг" class="circleImg">
-                <p class="reference-text">Профиль</p>
-            </a>
+            <div class="block-nav">
+                <a href="basket.html" class="linkAligner1">
+                    <img src="imags/КРУГ.svg" alt="Круг" class="circleImg">
+                    <p class="reference-text">Корзина</p>
+                </a>
+                <a href="personal_account.html" class="linkAligner2">
+                    <img src="imags/КРУГ.svg" alt="Круг" class="circleImg">
+                    <p class="reference-text">Профиль</p>
+                </a>
+            </div>
         </div>
     </header>
 
     <section class="catalog">
-        <div class="row fw aic limiter">
-            <div class="bt-catalog row aic">
+        <div class="row fw aic limiter catalog-content">
+            <button class="bt-catalog row aic">
                 <img src="imags/icons8-menu.svg" alt="Menu" class="Menu">
-                <p>Католог</p>
-            </div>
-            <div class="catalogExample sb">
-                <div class="columns">
-                    <p class="catalog-text">Стройматериалы</p>
-                    <p class="catalog-text">Инструменты</p>
-                </div>
-                <div class="columns">
-                    <p class="catalog-text">Краски</p>
-                    <p class="catalog-text">Электрика</p>
-                </div>
+                <p class="catalogheader">Католог</p>
+            </button>
+            <div class="adaptive-nav sb row">
+                <p class="catalog-text">Стройматериалы</p>
+                <p class="catalog-text">Краски</p>
+                <p class="catalog-text">Инструменты</p>
+                <p class="catalog-text">Электрика</p>
             </div>
         </div>
     </section>
 
-    <section class="Banner row limiter sb aic" style="margin-bottom: 200px;">
+    <section class="Banner row limiter sb aic">
         <button class="bt-forward"><img src="imags/Стрелки2.png" alt="Стрелки" class="ArrowImg"></button>
         <div class="row">
             <div class="bannerImg" style="margin-right: 67px;"><img src="imags/фотоБаннера1.webp" alt="Баннер1"
@@ -56,47 +55,50 @@
         <button class="bt-forward"><img src="imags/Стрелки.png" alt="Стрелки" class="ArrowImg"></button>
     </section>
 
-    <section class="limiter row infographics">
-        <div class="columns">
-            <div>
+    <section class="infographics">
+        <div class="infograph-content columns row fw sa">
+            <div class="adaptive-bl">
                 <p class="infographics-headerText">5</p>
                 <p class="infographics-text">лет успешной работы</p>
             </div>
-            <div>
+
+            <div class="adaptive-bl">
                 <p class="infographics-headerText">24/7</p>
                 <p class="infographics-text">круглосуточная поддержка</p>
             </div>
-        </div>
 
-        <div class="columns">
-            <div>
+            <div class="adaptive-bl">
                 <p class="infographics-headerText">500</p>
                 <p class="infographics-text">успешных заказов</p>
             </div>
-            <div>
+
+            <div class="adaptive-bl">
                 <p class="infographics-headerText">91%</p>
                 <p class="infographics-text">положительных отзывов</p>
             </div>
         </div>
     </section>
 
-    <section class="limiter product">
-        <p style="font-size: 36px; font-weight: bolder; color: #1B0051;">Выгодные цены</p>
-        <div class="filter">Фильтр</div>
-        <div class="row fw sb">
-            <div class="column">
-                <div class="card">
+    <section class="product">
+        <div class="limiter">
+            <p style="font-size: 36px; font-weight: bolder; color: #1B0051;">Выгодные цены</p>
+            <button class="filter">Фильтр</button>
+        </div>
+        <div class="adaptive-products row fw">
+            <div class="column adaptive-card">
+                <div class="card fw">
                     <img src="imags/Краска.png" alt="Краска" class="productImages">
-                    <p class="card-name">Эмаль аэрозольная Kudo KU-1002 RAL 9005 универсальная чёрная глянцевая (0,52 л)
+                    <p class="card-name fw">Эмаль аэрозольная Kudo KU-1002 RAL 9005 универсальная чёрная глянцевая (0,52
+                        л)
                     </p>
                     <div class="block-price row">
-                        <p class="price" style="margin-right: 16px;">Цена:</p>
+                        <p class="price">Цена:</p>
                         <p class="price">313р</p>
                     </div>
                 </div>
                 <button class="bt-addСart">+ Добавить в корзину</button>
             </div>
-            <div class="column">
+            <div class="column adaptive-card">
                 <div class="card">
                     <img src="imags/Лента.png" alt="Краска" class="productImages">
                     <p class="card-name">Эмаль аэрозольная Kudo KU-1002 RAL 9005 универсальная чёрная глянцевая (0,52 л)
@@ -108,7 +110,7 @@
                 </div>
                 <button class="bt-addСart">+ Добавить в корзину</button>
             </div>
-            <div class="column">
+            <div class="column adaptive-card">
                 <div class="card">
                     <img src="imags/Перчатки.png" alt="Краска" class="productImages">
                     <p class="card-name">Эмаль аэрозольная Kudo KU-1002 RAL 9005 универсальная чёрная глянцевая (0,52 л)
@@ -120,7 +122,7 @@
                 </div>
                 <button class="bt-addСart">+ Добавить в корзину</button>
             </div>
-            <div class="column">
+            <div class="column adaptive-card">
                 <div class="card">
                     <img src="imags/Шифер.png" alt="Краска" class="productImages">
                     <p class="card-name">Эмаль аэрозольная Kudo KU-1002 RAL 9005 универсальная чёрная глянцевая (0,52 л)
@@ -136,7 +138,7 @@
     </section>
 
     <footer>
-        <div class="row limiter fw">
+        <div class="footer-content row fw">
             <div class="Post12 row">
                 <div class="post1">
                     <h4>Покупателям</h4>
@@ -153,17 +155,17 @@
                     <p class="text-footer">Блоги</p>
                     <p class="text-footer">Отзывы компании</p>
                 </div>
-            </div>
-
-            <div class="post3">
-                <i></i>
-                <h4>ООО "МОЛОТОК", 2025</h4>
-                <p class="text-footer">Пользовательское соглашение</p>
-                <p class="text-footer">Политика конфиденциальности</p>
+                <div class="post3">
+                    <i></i>
+                    <h4>ООО "МОЛОТОК", 2025</h4>
+                    <p class="text-footer">Пользовательское соглашение</p>
+                    <p class="text-footer">Политика конфиденциальности</p>
+                </div>
             </div>
         </div>
     </footer>
-    
+
     <script src="js/index.js"></script>
 </body>
+
 </html>
