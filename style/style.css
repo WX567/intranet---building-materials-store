@@ -9,21 +9,15 @@ body {
 }
 
 header {
-    padding-bottom: 70px;
     border-bottom: 9px solid #D9D9D9;
 }
 
 footer {
-    margin-top: 150px;
     background-color: #1B0051;
 }
 
 .limiter {
-    margin: 30px 200px 0 200px;
-}
-
-.Logo {
-    margin-right: 80px;
+    margin: 30px 8% 5%;
 }
 
 #title {
@@ -38,9 +32,22 @@ footer {
     margin-bottom: 5%;
 }
 
+.catalog-content {
+    gap: 50px 7%;
+}
+
+.Banner {
+    display: none;
+    margin-bottom: 140px;
+    gap: 30px 5%;
+}
+
 .infographics {
-    padding: 62px 36px;
-    padding-left: 120px;
+    margin: 80px 200px;
+}
+
+.infograph-content {
+    padding: 62px;
     background-color: #5465FF;
     border-radius: 10px;
 }
@@ -50,10 +57,18 @@ footer {
     margin-bottom: 100px;
 }
 
+.header-product {
+    margin: 0 8%;
+}
+
+.adaptive-products {
+    gap: 30px 40px;
+}
+
 .HeaderAlignment {
     display: flex;
     flex-wrap: wrap;
-    gap: 60px 0;
+    gap: 40px 0;
 }
 
 .card {
@@ -77,8 +92,8 @@ footer {
 }
 
 .block-price {
-    width: 235px;
     margin-bottom: 32px;
+    gap: 10px;
 }
 
 h1,
@@ -91,7 +106,6 @@ h4 {
 
 h4 {
     text-align: start;
-    margin-top: 64px;
     margin-bottom: 38px;
     font-size: 32px;
 }
@@ -134,15 +148,17 @@ a {
     text-decoration: none;
 }
 
+.block-nav {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 0 50px;
+}
+
 .linkAligner1,
 .linkAligner2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.linkAligner1 {
-    margin-right: 50px;
 }
 
 p {
@@ -151,8 +167,7 @@ p {
 }
 
 #logo-text {
-    padding: 35px 0;
-    padding-left: 17px;
+    padding: 35px 17px;
     font-size: 40px;
     color: #1B0051;
     font-weight: bold;
@@ -177,18 +192,30 @@ p {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 0 77px;
 }
 
 .columns {
     display: flex;
     flex-direction: row;
-    gap: 0 53px;
+    gap: 50px 15px;
+}
+
+.adaptive-bl {
+    display: flex;
+    flex-wrap: wrap;
+    width: 265px;
+}
+
+.adaptive-nav {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    gap: 30px 10%;
 }
 
 .catalog-text {
     color: #1B0051;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
 }
 
@@ -202,7 +229,15 @@ p {
 }
 
 .infographics-text {
-    font-size: 36px
+    font-size: 36px;
+    font-weight: bold;
+}
+
+
+.infographics,
+.adaptive-products {
+    margin-right: 8%;
+    margin-left: 8%;
 }
 
 .card-name {
@@ -214,13 +249,13 @@ p {
 }
 
 .price {
-    width: 70px;
     font-weight: bold;
 }
 
 .text-footer {
     margin-bottom: 15px;
     font-size: 24px;
+    color: white;
 }
 
 input {
@@ -241,34 +276,39 @@ input {
 }
 
 .searchInput {
-    margin-right: 230px;
     display: flex;
-    width: 600px;
-    height: 34px;
+    flex-wrap: wrap;
+    grid-gap: 120px 0;
+    font-size: 24px;
+    width: 40%;
+    height: 45px;
 }
 
+.footer-content {
+    padding: 3% 10% 6%;
+    gap: 80px 10%;
+}
 
 .post1,
 .post2,
 .post3 {
     display: flex;
     flex-direction: column;
-    margin-bottom: 46px;
 }
 
-.post1 {
-    margin-right: 117px;
+.Post12 {
+    width: 55%;
+    height: auto;
+    gap: 10% 10%;
 }
 
-.post3 {
-    margin-left: auto;
+button {
+    border: none;
 }
 
 .bt-catalog {
-    margin-right: 86px;
     padding: 22px;
     width: 225px;
-    height: 40px;
     color: #ffffff;
     font-size: 32px;
     font-weight: bold;
@@ -279,8 +319,7 @@ input {
 }
 
 .Menu {
-    width: 55px;
-    height: 40px;
+    width: 50px;
 }
 
 .bt-back,
@@ -304,9 +343,11 @@ input {
     border-radius: 5px;
 }
 
-.LogoImg {
-    width: 89px;
-    height: 89px;
+.LogoImg,
+.linkMainPage {
+    min-width: 70px;
+    max-width: 89px;
+    height: auto;
 }
 
 .circleImg {
@@ -317,13 +358,13 @@ input {
 
 .bannerImg {
     overflow: hidden;
-    width: 590px;
-    height: 295px;
     border-radius: 10px;
 }
 
-.banner1 {
-    left: 100px;
+.banner1,
+.bannerImg {
+    width: 70%;
+    height: auto;
 }
 
 .productImages {
@@ -333,7 +374,7 @@ input {
 }
 
 .ArrowImg {
-    padding-top: 7px;
+    padding-top: 5px;
     width: 40px;
     height: 40px;
     color: #ffffff;
@@ -345,80 +386,100 @@ input {
         padding-bottom: 0px;
     }
 
-    footer {
-        margin-top: 75px;
-    }
-
-    .limiter {
-        margin: 59px 34px 28px 34px;
-    }
-
-    .Logo {
-        margin-right: 60px;
+    input {
+        font-size: 16px;
     }
 
     #logo-text {
         display: none;
     }
 
+    .LogoImg,
+    .linkMainPage {
+        width: 70px;
+        height: auto;
+    }
+
     .linkAligner1 {
-        margin-right: 20px;
+        margin-right: 0;
+    }
+
+    .block-nav {
+        display: flex;
+        flex-wrap: wrap;
+        grid-gap: 0 15px;
     }
 
     .circleImg {
-        width: 53px;
-        height: 53px;
+        width: 45px;
+        height: 45px;
     }
 
     .reference-text {
-        font-size: 22px;
+        font-size: 14px;
     }
 
     .searchInput {
         margin-right: 0;
+        padding: 10px 20px;
         width: 100%;
         order: 1;
+        border-radius: 10px;
     }
 
     /* Каталог */
     .catalog {
-        column-gap: 50px;
+        margin-bottom: 80px
+    }
+
+    .catalogheader {
+        font-size: 16px;
     }
 
     .bt-catalog {
-        margin-right: 0;
-        margin-bottom: 50px;
         padding: 15px;
-        width: 50%;
-        font-size: 16px;
+        width: 40%;
         border-radius: 5px;
+        gap: 0 15%;
     }
 
     .Menu {
-        width: 25%;
-        height: 70%;
+        width: 20%;
+        height: 10%;
     }
 
     .columns {
         display: flex;
-        flex-direction: column;
-        gap: 30px 0;
+        gap: 30px 15 px;
+    }
+
+    .adaptive-nav {
+        width: 100%;
+        gap: 30px 3%;
     }
 
     .Banner {
         display: none;
     }
 
-    /* Фильтер */
-
-    .filter {}
+    .catalog-text {
+        font-size: 18px;
+    }
 
     /* Инфографика */
 
     .infographics {
+        margin: 80px 0;
+    }
+
+    .infograph-content {
         margin: 0;
         padding: 30px;
         border-radius: 0;
+    }
+
+    .adaptive-bl {
+        width: 150px;
     }
 
     .infographics-headerText {
@@ -432,17 +493,31 @@ input {
 
     /* Товары */
 
+    .adaptive-products {
+        gap: 30px 20px;
+    }
+
+    .adaptive-card {
+        max-width: 170px;
+        min-width: 145px;
+        width: 80%;
+    }
+
+    .header-product {
+        margin: 0 8%;
+    }
+
     .card {
-        padding: 20px;
+        padding: 13%;
     }
 
     .productImages {
-        width: 133px;
-        height: 133px;
+        width: 100%;
+        height: auto;
     }
 
     .card-name {
-        width: 133px;
+        width: 100%;
         font-size: 12px;
     }
 
@@ -451,15 +526,13 @@ input {
     }
 
     .block-price {
-        width: 133px;
-        margin-bottom: 0;
+        width: 100%;
     }
 
     .bt-addСart {
         padding: 10px 10px;
-        width: 173px;
+        width: 100%;
         font-size: 11px;
-        margin-bottom: 30px;
     }
 
     .filter {
@@ -470,27 +543,16 @@ input {
         border-radius: 5px;
     }
 
+    .footer-content {
+        padding: 10% 6% 6%;
+        gap: 50px 0;
+    }
+
     .Post12 {
-        margin-top: 40px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0 60px;
-    }
-
-    .post1,
-    .post2,
-    .post3 {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 46px;
-    }
-
-    .post1 {
-        margin-right: 0;
+        width: 100%;
     }
 
     h4 {
-        margin-top: 0;
         font-size: 20px;
     }
 
@@ -498,15 +560,358 @@ input {
         font-size: 16px;
     }
 
-    .post3 {
-        margin-left: 0;
+}
+
+@media screen and (min-width : 481px) and (max-width : 768px) {
+
+    header {
+        padding-bottom: 0px;
+    }
+
+    input {
+        font-size: 16px;
+    }
+
+    #logo-text {
+        display: none;
+    }
+
+    .LogoImg,
+    .linkMainPage {
+        width: 70px;
+        height: auto;
+    }
+
+    .linkAligner1 {
+        margin-right: 0;
+    }
+
+    .block-nav {
+        display: flex;
+        flex-wrap: wrap;
+        grid-gap: 0 15px;
+    }
+
+    .circleImg {
+        width: 45px;
+        height: 45px;
+    }
+
+    .reference-text {
+        font-size: 14px;
+    }
+
+    .searchInput {
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+
+    /* Каталог */
+    .catalog {
+        margin-bottom: 80px
+    }
+
+    .catalog-content {
+        gap: 40px 7%;
+    }
+
+    .catalogheader {
+        font-size: 18px;
+    }
+
+    .bt-catalog {
+        padding: 15px;
+        width: 35%;
+        border-radius: 5px;
+        gap: 0 15%;
+    }
+
+    .Menu {
+        width: 20%;
+        height: 10%;
+    }
+
+    .columns {
+        display: flex;
+        gap: 30px 15px;
+    }
+
+    .adaptive-nav {
+        width: 100%;
+    }
+
+    .Banner {
+        display: none;
+    }
+
+    .catalog-text {
+        font-size: 18px;
+    }
+
+    /* Инфографика */
+
+    .infographics {
+        margin: 80px 0;
+    }
+
+    .infograph-content {
+        margin: 0;
+        padding: 30px;
+        border-radius: 0;
+    }
+
+    .adaptive-bl {
+        width: 150px;
+    }
+
+    .infographics-headerText {
+        font-size: 40px;
+        font-weight: bolder;
+    }
+
+    .infographics-text {
+        font-size: 20px
+    }
+
+    /* Товары */
+
+    .adaptive-products {
+        gap: 30px 20px;
+    }
+
+    .adaptive-card {
+        max-width: 40%;
+        min-width: 145px;
+        width: 80%;
+    }
+
+    .product {
+        margin: 30px 8% 5%;
+    }
+
+    .header-product {
+        margin: 0 8%;
+    }
+
+    .card {
+        padding: 13%;
+    }
+
+    .productImages {
+        width: 100%;
+        height: auto;
+    }
+
+    .card-name {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .price {
+        font-size: 18px;
+    }
+
+    .block-price {
+        width: 100%;
+    }
+
+    .bt-addСart {
+        padding: 10px 10px;
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .filter {
+        margin-bottom: 40px;
+        padding: 15px 10px;
+        width: 145px;
+        font-size: 20px;
+        border-radius: 5px;
+    }
+
+    .footer-content {
+        padding: 10% 10% 6%;
+        gap: 50px;
+    }
+
+    .Post12 {
+        width: 80%;
+        gap: 0 20%;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    .text-footer {
+        font-size: 16px;
     }
 }
+
+@media screen and (min-width : 769px) and (max-width : 1279px) {
+
+    header {
+        padding-bottom: 0px;
+    }
+
+    input {
+        font-size: 16px;
+    }
+
+    .LogoImg,
+    .linkMainPage {
+        width: 89px;
+        height: auto;
+    }
+
+    .linkAligner1 {
+        margin-right: 0;
+    }
+
+    .block-nav {
+        display: flex;
+        flex-wrap: wrap;
+        grid-gap: 0 30px;
+    }
+
+    .circleImg {
+        width: 70px;
+        height: auto;
+    }
+
+    .reference-text {
+        font-size: 24px;
+    }
+
+    .searchInput {
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+
+    /* Каталог */
+    .catalog {
+        margin-bottom: 80px
+    }
+
+    .catalog-content {
+        gap: 40px 6%;
+    }
+
+    .catalogheader {
+        font-size: 18px;
+    }
+
+    .bt-catalog {
+        padding: 15px;
+        width: 22%;
+        border-radius: 5px;
+        gap: 0 15%;
+    }
+
+    .Menu {
+        width: 20%;
+        height: 10%;
+    }
+
+    .columns {
+        display: flex;
+        gap: 30px 15px;
+    }
+
+    .adaptive-nav {
+        width: 72%;
+        gap: 10px 3%;
+    }
+
+    .Banner {
+        display: none;
+    }
+
+    .catalog-text {
+        font-size: 18px;
+    }
+
+    /* Инфографика */
+
+    .infographics {
+        margin: 80px 8%;
+    }
+
+    .infograph-content {
+        margin: 0;
+        padding: 30px;
+        border-radius: 5px;
+    }
+
+    .adaptive-bl {
+        width: 150px;
+    }
+
+    .infographics-headerText {
+        font-size: 40px;
+        font-weight: bolder;
+    }
+
+    .infographics-text {
+        font-size: 20px
+    }
+
+    /* Товары */
+
+    .adaptive-products {
+        gap: 40px 10%;
+    }
+
+    .adaptive-card {
+        max-width: 29%;
+    }
+
+    .product {
+        margin: 30px 8% 5%;
+    }
+
+    .card {
+        padding: 13%;
+    }
+
+    .productImages {
+        width: 100%;
+        height: auto;
+    }
+
+    .card-name {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .price {
+        font-size: 20px;
+    }
+
+    .block-price {
+        width: 100%;
+    }
+
+    .bt-addСart {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    h4 {
+        margin-top: 0;
+        font-size: 24px;
+    }
+
+    .text-footer {
+        font-size: 18px;
+    }
+}
+
 
 /* кнопки */
 @media (hover: hover) {
     .bt-catalog:hover {
-        background-color: #5465FF;
+        background-color: #1B0051;
     }
 
     .filter:hover {
@@ -521,5 +926,9 @@ input {
     .bt-forward:hover {
         font-size: 16px;
         background-color: #5465FF;
+    }
+
+    .text-footer:hover {
+        color: #788bff;
     }
 }
