@@ -1,121 +1,82 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const regForm = document.getElementById('reg_Form');
-    const inputs = regForm.querySelectorAll('input');
-    const registerBtn = regForm.querySelector('.bt-register');
-    const backBtn = regForm.querySelector('.bt-back');
-    const loginBtn = regForm.querySelector('.bt-login');
-
-    // Валидация полей
-    function validateField(input, type) {
-        const value = input.value.trim();
-        
-        switch(type) {
-            case 'text':
-                // Проверка ФИО (только буквы, минимум 2 символа)
-                return /^[а-яА-ЯёЁa-zA-Z]{2,}$/.test(value);
-            case 'email':
-                // Проверка email
-                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-            case 'phone':
-                // Проверка телефона (минимум 10 цифр)
-                return /^\d{10,}$/.test(value);
-            case 'password':
-                // Пароль минимум 6 символов
-                return value.length >= 6;
-            default:
-                return false;
-        }
-    }
-
-    // Показать ошибку
-    function showError(input, message) {
-        // Удаляем старую ошибку если есть
-        const oldError = input.parentNode.querySelector('.error-message');
-        if (oldError) oldError.remove();
-        
-        // Создаем элемент с ошибкой
-        const error = document.createElement('div');
-        error.className = 'error-message';
-        error.textContent = message;
-        input.parentNode.appendChild(error);
-        input.classList.add('invalid');
-    }
-
-    // Убрать ошибку
-    function clearError(input) {
-        const error = input.parentNode.querySelector('.error-message');
-        if (error) error.remove();
-        input.classList.remove('invalid');
-    }
-
-    // Проверка всех полей при клике на регистрацию
-    registerBtn.addEventListener('click', function(e) {
+    const form = document.getElementById('reg_Form');
+    const inputs = form.querySelectorAll('input');
+    
+    // Проверка при отправке формы
+    form.addEventListener('submit', function(e) {
         e.preventDefault();
-        let isValid = true;
-
-        // Проверяем все поля
+        let allValid = true;
+        
         inputs.forEach(input => {
-            const type = input.type === 'number' ? 
-                (input.previousElementSibling.textContent.includes('Телефон') ? 'phone' : 'password') : 
-                (input.previousElementSibling.textContent.includes('почты') ? 'email' : 'text');
+            const value = input.value.trim();
+            let isValid = true;
+            let errorMsg = '';
             
-            if (!input.value.trim()) {
-                showError(input, 'Поле обязательно для заполнения');
+            // Проверка пустого поля
+            if (!value) {
+                errorMsg = 'Поле обязательно для заполнения';
                 isValid = false;
-            } else if (!validateField(input, type)) {
-                let message = '';
-                switch(type) {
-                    case 'text': 
-                        message = 'Только буквы, минимум 2 символа'; 
-                        break;
-                    case 'email': 
-                        message = 'Введите корректный email'; 
-                        break;
-                    case 'phone': 
-                        message = 'Минимум 10 цифр'; 
-                        break;
-                    case 'password': 
-                        message = 'Минимум 6 символов'; 
-                        break;
-                }
-                showError(input, message);
+            } 
+            // Проверка ФИО
+            else if (input.type === 'text' && !/^[а-яА-ЯёЁa-zA-Z]{2,}$/.test(value)) {
+                errorMsg = 'Только буквы, минимум 2 символа';
                 isValid = false;
-            } else {
-                clearError(input);
             }
+            // Проверка email
+            else if (input.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+                errorMsg = 'Введите корректный email';
+                isValid = false;
+            }
+            // Проверка телефона
+            else if (input.type === 'tel' && !/^\d{10,}$/.test(value)) {
+                errorMsg = 'Минимум 10 цифр';
+                isValid = false;
+            }
+            // Проверка пароля
+            else if (input.type === 'password' && value.length < 6) {
+                errorMsg = 'Минимум 6 символов';
+                isValid = false;
+            }
+            
+            // Показ ошибки
+            showError(input, errorMsg);
+            if (!isValid) allValid = false;
         });
-
-        // Если все поля валидны
-        if (isValid) {
-            alert('Регистрация успешна!');
-            // Здесь можно отправить форму на сервер
-            // regForm.submit();
+        
+        if (allValid) {
+            alert('Форма успешно отправлена!');
+            // form.submit(); // Раскомментировать для реальной отправки
         }
     });
-
-    // Обработчики для кнопок
-    backBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        window.history.back();
-    });
-
-    loginBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        window.location.href = '/Интернет-магазинСМ/login.html';
-    });
-
-    // Валидация при вводе
+    
+    // Проверка при вводе
     inputs.forEach(input => {
         input.addEventListener('input', function() {
-            const type = this.type === 'number' ? 
-                (this.previousElementSibling.textContent.includes('Телефон') ? 'phone' : 'password') : 
-                (this.previousElementSibling.textContent.includes('почты') ? 'email' : 'text');
-            
-            if (this.value.trim() && !validateField(this, type)) {
-                this.classList.add('invalid');
-            } else {
-                clearError(this);
-            }
+            showError(this, '');
         });
+    });
+    
+    // Функция показа ошибки
+    function showError(input, message) {
+        let error = input.nextElementSibling;
+        
+        // Создаем элемент ошибки если его нет
+        if (!error || !error.classList.contains('error-message')) {
+            error = document.createElement('div');
+            error.className = 'error-message';
+            input.parentNode.appendChild(error);
+        }
+        
+        error.textContent = message;
+        input.classList.toggle('invalid', message !== '');
+    }
+    
+    // Обработчики кнопок
+    document.querySelector('.bt-back').addEventListener('click', function() {
+        window.history.back();
+    });
+    
+    document.querySelector('.bt-login').addEventListener('click', function() {
+        window.location.href = '/Интернет-магазинСМ/login.html';
     });
 });

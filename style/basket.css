@@ -66,6 +66,13 @@ footer {
     border-radius: 5px;
 }
 
+.delete-svg  {
+    width: 100%;
+    max-width: 65px;
+    height: auto;
+    border-radius: 10px;
+}
+
 .money {
     display: flex;
     justify-content: center;
@@ -96,8 +103,9 @@ footer {
 
 #formBasket {
     padding: 46px 34px 60px 53px;
-    width: 1077px;
-    height: 445px;
+    width: 100%;
+    max-width: 930px;
+    max-height: 250px;
     background-color: #5465FF;
     border-radius: 10px;
 }
@@ -326,7 +334,7 @@ input {
     height: 89px;
 }
 
-.productImg{
+.productImg {
     width: 89px;
     height: 89px;
     border-radius: 10px;

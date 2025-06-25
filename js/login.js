@@ -1,90 +1,61 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const loginForm = document.getElementById('log_Form');
-    const emailInput = loginForm.querySelector('input[type="text"]:first-of-type');
-    const passwordInput = loginForm.querySelector('input[type="text"]:last-of-type');
-    const loginButton = loginForm.querySelector('.bt-login');
+document.getElementById('log_Form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  // Получаем значения полей
+  const login = document.getElementById('loginInput').value;
+  const password = document.getElementById('passwordInput').value;
+  
+  // Элементы для отображения ошибок
+  const loginError = document.getElementById('loginError');
+  const passwordError = document.getElementById('passwordError');
+  
+  // Сбрасываем предыдущие ошибки
+  loginError.style.display = 'none';
+  passwordError.style.display = 'none';
+  
+  // Проверка логина (только английские буквы и цифры)
+  const loginRegex = /^[a-zA-Z0-9]+$/;
+  if (!loginRegex.test(login)) {
+    loginError.style.display = 'block';
+    return false;
+  }
+  
+  // Проверка пароля (английские буквы, цифры и не менее 6 символов)
+  const passwordRegex = /^[a-zA-Z0-9]{6,}$/;
+  if (!passwordRegex.test(password)) {
+    passwordError.style.display = 'block';
+    return false;
+  }
+  
+  // Если все проверки пройдены, можно отправлять форму
+  alert('Форма успешно отправлена!');
+  // Здесь можно добавить отправку формы на сервер
+  // this.submit();
+});
 
-    // Функция проверки email/логина
-    function validateEmail(email) {
-        // Проверка на email
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        // Проверка на логин (минимум 3 символа)
-        const loginRegex = /^[a-zA-Z0-9_]{3,}$/;
-        
-        return emailRegex.test(email) || loginRegex.test(email);
-    }
+// Дополнительная проверка при вводе (опционально)
+document.getElementById('loginInput').addEventListener('input', function() {
+  const loginError = document.getElementById('loginError');
+  const loginRegex = /^[a-zA-Z0-9]*$/;
+  
+  if (!loginRegex.test(this.value)) {
+    loginError.style.display = 'block';
+  } else {
+    loginError.style.display = 'none';
+  }
+});
 
-    // Функция проверки пароля
-    function validatePassword(password) {
-        // Пароль должен содержать минимум 6 символов
-        return password.length >= 6;
-    }
-
-    // Обработчик клика по кнопке входа
-    loginButton.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        const email = emailInput.value.trim();
-        const password = passwordInput.value.trim();
-        let isValid = true;
-
-        // Сброс предыдущих ошибок
-        resetErrors();
-
-        // Проверка email/логина
-        if (!email) {
-            showError(emailInput, 'Поле обязательно для заполнения');
-            isValid = false;
-        } else if (!validateEmail(email)) {
-            showError(emailInput, 'Введите корректный email или логин');
-            isValid = false;
-        }
-
-        // Проверка пароля
-        if (!password) {
-            showError(passwordInput, 'Поле обязательно для заполнения');
-            isValid = false;
-        } else if (!validatePassword(password)) {
-            showError(passwordInput, 'Пароль должен содержать минимум 6 символов');
-            isValid = false;
-        }
-
-        // Если все проверки пройдены
-        if (isValid) {
-            alert('Форма успешно отправлена!');
-            // Здесь можно добавить отправку формы на сервер
-            // loginForm.submit();
-        }
-    });
-
-    // Функция отображения ошибки
-    function showError(input, message) {
-        const errorElement = document.createElement('div');
-        errorElement.className = 'error-message';
-        errorElement.style.color = 'red';
-        errorElement.style.fontSize = '12px';
-        errorElement.style.marginTop = '5px';
-        errorElement.textContent = message;
-        
-        input.parentNode.appendChild(errorElement);
-        input.style.borderColor = 'red';
-    }
-
-    // Функция сброса ошибок
-    function resetErrors() {
-        const errorMessages = document.querySelectorAll('.error-message');
-        errorMessages.forEach(msg => msg.remove());
-        
-        const inputs = loginForm.querySelectorAll('input');
-        inputs.forEach(input => {
-            input.style.borderColor = '';
-        });
-    }
-
-    // Обработчик для кнопки "Назад"
-    const backButton = loginForm.querySelector('.bt-back');
-    backButton.addEventListener('click', function(e) {
-        e.preventDefault();
-        alert('Возврат на предыдущую страницу');
-    });
+document.getElementById('passwordInput').addEventListener('input', function() {
+  const passwordError = document.getElementById('passwordError');
+  const passwordRegex = /^[a-zA-Z0-9]{0,}$/;
+  
+  if (!passwordRegex.test(this.value)) {
+    passwordError.style.display = 'block';
+    passwordError.textContent = 'Пароль должен содержать только английские буквы и цифры';
+  } else if (this.value.length > 0 && this.value.length < 6) {
+    passwordError.style.display = 'block';
+    passwordError.textContent = 'Пароль должен быть не менее 6 символов';
+  } else {
+    passwordError.style.display = 'none';
+  }
 });

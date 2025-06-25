@@ -1,65 +1,90 @@
 document.addEventListener('DOMContentLoaded', function() {
-  function animateCounter(element, finalValue, duration = 2000) {
-    const startValue = 0;
-    const startTime = performance.now();
-    const isPercentage = element.textContent.includes('%');
-    
-    function updateCounter(currentTime) {
-      const elapsedTime = currentTime - startTime;
-      const progress = Math.min(elapsedTime / duration, 1);
-      const currentValue = Math.floor(progress * (finalValue - startValue) + startValue);
+  // Функция анимации числа
+  function animateNumber(element, targetNumber) {
+    let currentNumber = 0;
+    const duration = 2000; // 2 секунды на всю анимацию
+    const steps = 50; // Количество шагов анимации
+    const stepTime = duration / steps;
+    const increment = targetNumber / steps;
+    const isPercent = element.textContent.includes('%');
+
+    const timer = setInterval(function() {
+      currentNumber = Math.min(currentNumber + increment, targetNumber);
+      element.textContent = isPercent ? 
+        Math.round(currentNumber) + '%' : 
+        Math.round(currentNumber);
       
-      element.textContent = isPercentage ? `${currentValue}%` : currentValue;
-      
-      if (progress < 1) {
-        requestAnimationFrame(updateCounter);
-      } else {
-        // Гарантируем точное конечное значение
-        element.textContent = isPercentage ? `${finalValue}%` : finalValue;
+      if (currentNumber >= targetNumber) {
+        clearInterval(timer);
       }
-    }
-    
-    requestAnimationFrame(updateCounter);
+    }, stepTime);
   }
 
-  function initCounters() {
+  // Запуск анимации для всех счетчиков
+  function startCounters() {
     const counters = document.querySelectorAll('.infographics-headerText');
     
-    counters.forEach(counter => {
-      const originalText = counter.textContent.trim();
-      const numericValue = parseInt(originalText.replace(/\D/g, ''));
+    counters.forEach(function(counter) {
+      // Если анимация уже была запущена - пропускаем
+      if (counter.dataset.animated === 'true') return;
       
-      // Пропускаем нечисловые значения (например, "24/7")
-      if (isNaN(numericValue)) return;
+      const text = counter.textContent.trim();
+      const number = parseInt(text.replace(/\D/g, ''));
       
-      // Сохраняем оригинальное значение в data-атрибут
-      counter.dataset.finalValue = originalText;
-      
-      // Начинаем анимацию с 0
-      counter.textContent = originalText.includes('%') ? '0%' : '0';
-      
-      animateCounter(counter, numericValue);
+      if (!isNaN(number)) {
+        counter.dataset.original = text; // Сохраняем оригинальный текст
+        counter.textContent = text.includes('%') ? '0%' : '0';
+        counter.dataset.animated = 'true'; // Помечаем как анимированный
+        animateNumber(counter, number);
+      }
     });
   }
 
-  // Запускаем при загрузке
-  initCounters();
+  // Проверяем, виден ли блок
+  function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.bottom >= 0
+    );
+  }
 
-  // И при появлении в области видимости (если страница прокручивается)
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const counters = entry.target.querySelectorAll('.infographics-headerText');
-        counters.forEach(counter => {
-          if (counter.dataset.finalValue && counter.textContent === '0') {
-            const finalValue = parseInt(counter.dataset.finalValue.replace(/\D/g, ''));
-            animateCounter(counter, finalValue);
-          }
-        });
-      }
-    });
-  }, { threshold: 0.1 });
+  // Проверяем при загрузке и при прокрутке
+  function checkCountersVisibility() {
+    const section = document.querySelector('.infographics');
+    if (section && isElementInViewport(section)) {
+      startCounters();
+      // Удаляем обработчик после запуска
+      window.removeEventListener('scroll', checkCountersVisibility);
+    }
+  }
 
-  const section = document.querySelector('.infographics');
-  if (section) observer.observe(section);
-}); 
+  // Запускаем проверку при загрузке и при прокрутке
+  checkCountersVisibility();
+  window.addEventListener('scroll', checkCountersVisibility);
+});
+
+// Слайдер ------------------------------------
+
+// Получаем элементы слайдера
+const slider = document.querySelector('.slides');
+const slides = document.querySelectorAll('.slide');
+
+let currentSlide = 0;
+
+// Функция для переключения слайдов
+function moveSlider() {
+
+  currentSlide++;
+
+  // Если дошли до конца - возвращаемся к первому слайду
+  if (currentSlide >= slides.length) {
+    currentSlide = 0;
+  }
+
+  // Перемещаем слайдер
+  slider.style.transform = 'translateX(-' + (currentSlide * 33.33) + '%)';
+}
+
+// Запускаем автоматическое переключение каждые 3 секунды
+setInterval(moveSlider, 3000);  

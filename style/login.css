@@ -8,6 +8,11 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
+.jcfe {
+    display: flex;
+    justify-content: flex-end;
+}
+
 #login {
     margin-top: 100px;
     display: flex;
@@ -18,8 +23,9 @@ body {
     padding: 47px;
     display: flex;
     flex-direction: column;
-    width: 30%;
-    height: 600px;
+    width: 100%;
+    max-width: 610px;
+    height: auto;
     background-color: #5465FF;
     border-radius: 20px;
 }
@@ -31,18 +37,20 @@ h1 {
     font-size: 48px;
 }
 
-.card {
+.block-buttons {
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    gap: 25px;
 }
 
 .block {
-    margin-top: 75px;
-    width: 100%;
+    margin-top: 15%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    gap: 30px;
 }
 
 input:focus {
@@ -55,11 +63,14 @@ p {
     color: #ffffff;
 }
 
+a {
+    text-decoration: none;
+}
+
 input {
-    margin-bottom: 7px;
     padding: 20px;
-    width: 360px;
     height: 24px;
+    max-width: 430px;
     background-color: #BFD7FF;
     color: #1B0051;
     font: 24px "Roboto", sans-serif;
@@ -68,44 +79,96 @@ input {
     border-radius: 18px;
 }
 
-.bt-back,
-.bt-register,
-.bt-login {
+.header-input {
+    margin-bottom: 2%;
+}
+
+.input-block {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin-bottom: 17px;
-    width: 380px;
-    height: 64px;
+    width: 100%;
+}
+
+.password {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.alignment-block {
+    padding: 10px 20px;
+    min-width: 50px;
+    max-width: 160px;
+    height: auto;
     background-color: #788BFF;
     border: none;
-    border-radius: 18px;
+    border-radius: 10px;
     font-size: 24px;
     color: #ffffff;
-    text-decoration: none;
 }
 
-.bt-back {
-    width: 194px;
+.alignment-block:hover {
+    background-color: #1B0051;
 }
 
-.bt-login {
-    margin-bottom: 23px;
-    width: 194px;
+.register {
+    font-size: 24px;
+    color: white;
 }
 
 /* js код */
 
-.error-message {
+#loginError,
+#passwordError {
+    margin-top: 5%;
     color: red;
-    font-size: 12px;
-    margin-top: 5px;
+    display: none;
 }
 
-input:invalid {
-    border-color: red;
+@media screen and (min-width : 320px) and (max-width : 480px) {
+
+    #login {
+        margin: 0 10%;
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+    }
+
+    #log_Form {
+        padding: 47px 10%;
+        display: flex;
+        width: 90%;
+        flex-direction: column;
+        height: auto;
+        background-color: #5465FF;
+        border-radius: 10px;
+    }
+
+    .header-input {
+        font-size: 18px;
+    }
+
+    .register {
+        font-size: 16px;
+    }
 }
 
-input:valid {
-    border-color: green;
+@media screen and (min-width : 481px) and (max-width : 768px) {
+    #login {
+        margin: 0 5%;
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+    }
+
+    #log_Form {
+        padding: 47px 10%;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+        background-color: #5465FF;
+        border-radius: 10px;
+    }
 }

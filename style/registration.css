@@ -9,17 +9,20 @@ body {
 }
 
 #regis {
+  margin: 0 10%;
   margin-top: 100px;
   display: flex;
   justify-content: center;
 }
 
 #reg_Form {
+  margin-bottom: 30%;
   padding: 47px;
   display: flex;
   flex-direction: column;
-  width: 897px;
-  height: 713px;
+  max-width: 810px;
+  width: 100%;
+  height: auto;
   background-color: #5465FF;
   border-radius: 20px;
 }
@@ -31,18 +34,35 @@ h1 {
   font-size: 48px;
 }
 
-.card {
+.block-buttons,
+.back {
+  width: 60%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  gap: 25px;
 }
 
-.block {
+.back {
+  width: 27%;
+  align-items: start;
+}
+
+.block,
+.block2 {
   margin-top: 75px;
-  width: 100%;
   display: flex;
+  width: 100%;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px 5%;
+}
+
+.block2 {
+  margin-top: 45px;
   justify-content: space-between;
+  gap: 0;
 }
 
 input:focus {
@@ -51,59 +71,143 @@ input:focus {
 }
 
 p {
+  margin-bottom: 10px;
   font-size: 24px;
   color: #ffffff;
 }
 
+a {
+  text-decoration: none;
+}
+
 input {
-  margin-bottom: 7px;
   padding: 20px;
-  width: 360px;
-  height: 24px;
+  height: auto;
   background-color: #BFD7FF;
   color: #1B0051;
   font: 24px "Roboto", sans-serif;
   font-weight: 700;
   border: none;
-  border-radius: 18px;  
+  border-radius: 18px;
 }
 
-.bt-back,
-.bt-register, .bt-login {
+.adaptive-input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 380px;
+  gap: 20px 0;
+}
+
+.input-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+
+.alignment-block,
+.alignment-registr {
+  padding: 10px 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-bottom: 17px;
-  width: 380px;
-  height: 64px;
+  min-width: 50px;
+  max-width: 195px;
+  height: auto;
   background-color: #788BFF;
   border: none;
-  border-radius: 18px;
+  border-radius: 10px;
   font-size: 24px;
   color: #ffffff;
-  text-decoration: none;
 }
 
-.bt-back {
-  width: 194px;
+.login {
+  font-size: 24px;
+  color: white;
 }
 
-.bt-login {
-  width: 194px;
+.alignment-registr {
+  display: flex;
+  justify-content: center;
+  max-width: 250px;
 }
-
 
 .error-message {
-    color: red;
-    font-size: 12px;
-    margin-top: 5px;
+  margin-top: 50%;
+  color: rgb(121, 0, 0);
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 5px;
 }
 
-input.invalid {
-    border-color: red;
+.invalid {
+  border-color: red;
 }
 
-input:valid {
-    border-color: green;
+@media screen and (min-width : 320px) and (max-width : 480px) {
+
+  h1 {
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  input {
+    padding: 10px 20px;
+    height: 50%;
+    border-radius: 10px;
+  }
+
+  #regis {
+    margin: 0 10%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #reg_Form {
+    padding: 47px 10%;
+    width: 90%;
+    border-radius: 10px;
+  }
+
+  .header-input {
+    font-size: 18px;
+  }
+
+  .alignment-block {
+    padding: 10px 10%;
+    font-size: 16px;
+  }
+
+  .alignment-registr {
+    padding: 10px 5%;
+    font-size: 16px;
+  }
+
+  .login {
+    font-size: 16px;
+  }
 }
 
+@media screen and (min-width : 481px) and (max-width : 768px) {
+  #regis {
+    margin: 0 10%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #reg_Form {
+    padding: 47px 10%;
+    width: 90%;
+    border-radius: 10px;
+  }
+
+  .alignment-registr {
+    padding: 10px 5%;
+  }
+
+}

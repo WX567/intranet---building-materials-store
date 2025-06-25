@@ -13,26 +13,30 @@
         <form id="log_Form">
             <h1>Войти</h1>
             <div class="block">
-                <div class="card">
-                    <div>
-                        <p>Адрес элек. почты / Логин</p>
-                        <input type="text">
-                    </div>
-                    <div style="margin-bottom: 50px;">
-                        <div>
-                            <p>Пароль</p>
-                            <input type="number" name="pazzv">
-                        </div>
-                    </div>
-                    <div class="card ">
-                        <a href="/Интернет-магазинСМ/login.html" class="bt-login">Войти</a>
-                    </div>
-                    <div class="card">
-                        <button class="bt-back">Назад</button>
+                <div class="input-block">
+                    <p class="header-input">Адрес элек. почты / Логин</p>
+                    <input type="text" id="loginInput">
+                    <p id="loginError">Логин должен содержать только английские буквы и цифры</p>
+                </div>
+                <div class="input-block">
+                    <p class="header-input">Пароль</p>
+                    <input type="password" id="passwordInput">
+                    <p id="passwordError">
+                        Пароль должен содержать только английские буквы и цифры и быть не менее 6 символов
+                    </p>
+                </div>
+                <div class="jcfe">
+                    <div class="block-buttons">
+                        <button type="submit" class="alignment-block">Войти</button> <!-- Изменил ссылку на button -->
+                        <a href="index.html" class="alignment-block">Назад</a>
+                        <a href="registration.html" class="register">Зарегистрироватся</a>
                     </div>
                 </div>
+
+            </div>
         </form>
     </section>
     <script src="js/login.js"></script>
 </body>
+
 </html>
